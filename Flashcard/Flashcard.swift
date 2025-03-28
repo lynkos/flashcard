@@ -1,12 +1,12 @@
 //
-//  MemoryCard.swift
+//  Flashcard.swift
 //  Flashcard
 //
 //  Created by Kiran Brahmatewari on 3/27/25.
 //
 
-// MemoryCard data model
-struct MemoryCard: Equatable {
+// Flashcard data model
+struct Flashcard: Equatable {
     let emoji: String
     var isFaceUp: Bool = false
     var isMatched: Bool = false

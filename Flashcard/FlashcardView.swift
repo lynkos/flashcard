@@ -1,5 +1,5 @@
 //
-//  MemoryCardView.swift
+//  FlashcardView.swift
 //  Flashcard
 //
 //  Created by Kiran Brahmatewari on 3/27/25.
@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct MemoryCardView: View {
+struct FlashcardView: View {
     @State private var isShowingEmoji = false
-    let memoryCard: MemoryCard
+    let card: Flashcard
 
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15.0)
-                .fill(memoryCard.isFaceUp ? Color.blue.gradient : Color.indigo.gradient)
+                .fill(card.isFaceUp ? Color.blue.gradient : Color.indigo.gradient)
 
-            if memoryCard.isFaceUp || memoryCard.isMatched {
-                Text(memoryCard.emoji)
+            if card.isFaceUp || card.isMatched {
+                Text(card.emoji)
                     .font(.system(size: 35, weight: .semibold))
                     .foregroundStyle(.white)
                     .padding()
@@ -28,5 +28,5 @@ struct MemoryCardView: View {
 }
 
 #Preview {
-    MemoryCardView(memoryCard: MemoryCard(emoji: "💜"))
+    FlashcardView(card: Flashcard(emoji: "💜"))
 }

@@ -1,5 +1,5 @@
 //
-//  MemoryContentView.swift
+//  FlashcardContentView.swift
 //  Flashcard
 //
 //  Created by Kiran Brahmatewari on 3/27/25.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct MemoryContentView: View {
-    @State private var cards: [MemoryCard] = createMemoryGameCards(numberOfPairs: 9)
+struct FlashcardContentView: View {
+    @State private var cards: [Flashcard] = createGameCards(numberOfPairs: 9)
     @State private var selectedIndices: [Int] = []
-    @State private var selectedNumberOfPairs: Int = 3
+    @State private var selectedNumberOfPairs: Int = 9
     @State private var showSizePicker: Bool = false
     @State private var sizeButtonPosition: CGPoint = .zero
     
@@ -21,15 +21,15 @@ struct MemoryContentView: View {
     ]
         
     // Create set of matching cards
-    static func createMemoryGameCards(numberOfPairs: Int) -> [MemoryCard] {
-        var cards: [MemoryCard] = []
+    static func createGameCards(numberOfPairs: Int) -> [Flashcard] {
+        var cards: [Flashcard] = []
         
         // Ensure we don't exceed available emojis
-        let selectedEmojis = Array(MemoryCard.emojis.prefix(numberOfPairs))
+        let selectedEmojis = Array(Flashcard.emojis.prefix(numberOfPairs))
         
         for emoji in selectedEmojis {
-            cards.append(MemoryCard(emoji: emoji))
-            cards.append(MemoryCard(emoji: emoji))
+            cards.append(Flashcard(emoji: emoji))
+            cards.append(Flashcard(emoji: emoji))
         }
         
         return cards.shuffled()
@@ -37,7 +37,7 @@ struct MemoryContentView: View {
     
     // Reset game
     private func resetGame() {
-        cards = Self.createMemoryGameCards(numberOfPairs: selectedNumberOfPairs)
+        cards = Self.createGameCards(numberOfPairs: selectedNumberOfPairs)
         selectedIndices.removeAll()
         
         // Unhide all matched cards by resetting their state
@@ -83,7 +83,7 @@ struct MemoryContentView: View {
                 cardGrid
             }
             
-            // Size Picker Dropdown (Appears over cards)
+            // Size Picker Dropdown (appears over cards)
             if showSizePicker {
                 dropdownOptions
             }
@@ -154,7 +154,7 @@ struct MemoryContentView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 15) {
                 ForEach(0..<cards.count, id: \.self) { index in
-                    MemoryCardView(memoryCard: cards[index])
+                    FlashcardView(card: cards[index])
                         .opacity(cards[index].isMatched ? 0 : 1)
                         .onTapGesture {
                             choose(at: index)
@@ -163,10 +163,10 @@ struct MemoryContentView: View {
             }
             .padding()
         }
-        .frame(maxHeight: .infinity) // Allow the cards to scroll
+        .frame(maxHeight: .infinity)
     }
 }
 
 #Preview {
-    MemoryContentView()
+    FlashcardContentView()
 }
