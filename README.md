@@ -38,10 +38,12 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove this reminder once you upload your README. 
-
-[Guide]](https://www.youtube.com/watch?v=GA92eKlYio4) .
-
+<div>
+    <a href="https://www.loom.com/share/bebc2939603e4229b1ad5699ac721580">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/bebc2939603e4229b1ad5699ac721580-f7b1ea5e9fe46315-full-play.gif">
+    </a>
+  </div>
+  
 ## Notes
 
 Describe any challenges encountered while building the app.
