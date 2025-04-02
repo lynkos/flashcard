@@ -2,7 +2,7 @@
 
 Submitted by: Kiran Brahmatewari
 
-**Name of your app** is an app that allows users to play a simple memory game.
+**Flashcard** is an app that allows users to play a simple memory game.
 
 Time spent: **6** hours spent in total
 
@@ -35,8 +35,6 @@ The following **optional** features are implemented:
   * Consider using animations or transitions to make the user experience more engaging.
 
 ## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
 
 <div>
     <a href="https://www.loom.com/share/bebc2939603e4229b1ad5699ac721580">
