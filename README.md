@@ -1,15 +1,7 @@
-# Project 4 - Flashcard
+# Project 4 - *Flashcard*
+iOS app that allows users to play a simple memory game.
 
-Submitted by: Kiran Brahmatewari
-
-**Flashcard** is an app that allows users to play a simple memory game.
-
-Time spent: **6** hours spent in total
-
-## Required Features
-
-The following **required** functionality is completed:
-
+## Features
 - [x] App loads to display a grid of cards initially placed face-down:
   - Upon launching the app, a grid of cards should be visible.
   - Cards are facedown to indicate the start of the game.
@@ -23,19 +15,13 @@ The following **required** functionality is completed:
 - [x] User can reset the game and start a new game via a button:
   - Include a button that allows users to reset the game.
   - This button should shuffle the cards and reset any game-related state.
- 
-The following **optional** features are implemented:
-
 - [x] User can select number of pairs to play with (at least 2 unique values like 2 and 4).
-  * (Hint: user Picker)
 - [x] App allows for user to scroll to see pairs out of view.
-  * (Hint: Use a Scrollview)
 - [x] Add any flavor you’d like to your UI with colored buttons or backgrounds, unique cards, etc. 
   * Enhance the visual appeal of the app with colored buttons, backgrounds, or unique card designs.
   * Consider using animations or transitions to make the user experience more engaging.
 
-## Video Walkthrough
-
+## Demo
 <div>
     <a href="https://www.loom.com/share/bebc2939603e4229b1ad5699ac721580">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/bebc2939603e4229b1ad5699ac721580-f7b1ea5e9fe46315-full-play.gif">
@@ -43,7 +29,6 @@ The following **optional** features are implemented:
   </div>
   
 ## License
-
     Copyright 2025 Kiran Brahmatewari
 
     Licensed under the Apache License, Version 2.0 (the "License");
